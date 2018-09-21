@@ -1,5 +1,9 @@
 # emacs-constant-theme
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![MELPA](https://melpa.org/packages/constant-theme-badge.svg)](https://melpa.org/#/constant-theme)
+[![MELPA Stable](http://stable.melpa.org/packages/constant-theme-badge.svg)](http://stable.melpa.org/#/constant-theme)
+
 A calm, almost monochrome color theme for Emacs with a dark and light variant.
 
 *NOTE:* I am not an Emacs expert, so if you find that color definitions are missing
