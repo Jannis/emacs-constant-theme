@@ -2,6 +2,10 @@
 
 A calm, almost monochrome color theme for Emacs with a dark and light variant.
 
+*NOTE:* I am not an Emacs expert, so if you find that color definitions are missing
+for an Emacs feature or package, please don't hesitate to let me know. Pull requests
+are always appreciated!
+
 ## Installation
 
 Using [MELPA](http://melpa.milkbox.net/#/getting-started):
