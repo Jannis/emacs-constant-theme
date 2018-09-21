@@ -36,7 +36,7 @@
 (deftheme constant-light "A calm, light, almost monochrome color theme")
 
 
-(defconst named-colors
+(defconst constant-light-theme-colors
   '(;; Basics
     (white . "#ffffff")
 
@@ -90,69 +90,69 @@
     (purple . "#b965e8")))
 
 
-(defun named-color (name)
+(defun constant-light-theme-color (name)
   "Return the constant-light theme color with the given NAME."
-  (cdr (assoc name named-colors)))
+  (cdr (assoc name constant-light-theme-colors)))
 
 
 (let ((class                    '((class color) (min-colors 256)))
-      (default-fg               (named-color 'grey-900))
-      (default-bg               (named-color 'grey-50))
-      (minor-fg                 (named-color 'grey-200))
-      (minor-bg                 (named-color 'grey-50))
-      (inactive-fg              (named-color 'grey-600))
-      (border-fg                (named-color 'grey-200))
-      (frame-fg                 (named-color 'grey-500))
-      (cursor-fg                (named-color 'grey-900))
-      (cursor-bg                (named-color 'grey-300))
+      (default-fg               (constant-light-theme-color 'grey-900))
+      (default-bg               (constant-light-theme-color 'grey-50))
+      (minor-fg                 (constant-light-theme-color 'grey-200))
+      (minor-bg                 (constant-light-theme-color 'grey-50))
+      (inactive-fg              (constant-light-theme-color 'grey-600))
+      (border-fg                (constant-light-theme-color 'grey-200))
+      (frame-fg                 (constant-light-theme-color 'grey-500))
+      (cursor-fg                (constant-light-theme-color 'grey-900))
+      (cursor-bg                (constant-light-theme-color 'grey-300))
 
       ;; Scrollbars
-      (scrollbar-fg             (named-color 'grey-600))
-      (scrollbar-bg             (named-color 'grey-100))
+      (scrollbar-fg             (constant-light-theme-color 'grey-600))
+      (scrollbar-bg             (constant-light-theme-color 'grey-100))
 
       ;; Highlighting
-      (highlight-fg             (named-color 'white))
-      (highlight-bg             (named-color 'red))
+      (highlight-fg             (constant-light-theme-color 'white))
+      (highlight-bg             (constant-light-theme-color 'red))
 
       ;; Current line
-      (hl-line-bg               (named-color 'grey-100))
+      (hl-line-bg               (constant-light-theme-color 'grey-100))
 
       ;; Search
-      (search-fg                (named-color 'white))
-      (search-bg                (named-color 'primary-600))
-      (search-bg-0              (named-color 'primary-500))
-      (search-bg-1              (named-color 'primary-400))
-      (search-bg-2              (named-color 'primary-300))
-      (search-bg-3              (named-color 'primary-100))
+      (search-fg                (constant-light-theme-color 'white))
+      (search-bg                (constant-light-theme-color 'primary-600))
+      (search-bg-0              (constant-light-theme-color 'primary-500))
+      (search-bg-1              (constant-light-theme-color 'primary-400))
+      (search-bg-2              (constant-light-theme-color 'primary-300))
+      (search-bg-3              (constant-light-theme-color 'primary-100))
 
       ;; Selection
-      (selection-bg             (named-color 'grey-200))
+      (selection-bg             (constant-light-theme-color 'grey-200))
 
       ;; Auto-completion
-      (completion-fg            (named-color 'grey-500))
-      (completion-bg            (named-color 'grey-800))
-      (completion-match-fg      (named-color 'red-500))
-      (completion-mouse-fg      (named-color 'white))
-      (completion-selection-fg  (named-color 'red-500))
-      (completion-selection-bg  (named-color 'grey-200))
-      (completion-annotation-fg (named-color 'red-400))
+      (completion-fg            (constant-light-theme-color 'grey-500))
+      (completion-bg            (constant-light-theme-color 'grey-800))
+      (completion-match-fg      (constant-light-theme-color 'red-500))
+      (completion-mouse-fg      (constant-light-theme-color 'white))
+      (completion-selection-fg  (constant-light-theme-color 'red-500))
+      (completion-selection-bg  (constant-light-theme-color 'grey-200))
+      (completion-annotation-fg (constant-light-theme-color 'red-400))
 
       ;; Warnings & errors
-      (warning-fg               (named-color 'white))
-      (warning-bg               (named-color 'red-600))
-      (error-fg                 (named-color 'white))
-      (error-bg                 (named-color 'red))
+      (warning-fg               (constant-light-theme-color 'white))
+      (warning-bg               (constant-light-theme-color 'red-600))
+      (error-fg                 (constant-light-theme-color 'white))
+      (error-bg                 (constant-light-theme-color 'red))
 
       ;; Language syntax highlighting
-      (variable-fg              (named-color 'black))
-      (function-fg              (named-color 'grey-900))
-      (type-fg                  (named-color 'grey-700))
-      (constant-fg              (named-color 'grey-600))
-      (keyword-fg               (named-color 'grey-500))
-      (builtin-fg               (named-color 'grey-400))
-      (string-fg                (named-color 'grey-600))
-      (doc-fg                   (named-color 'primary-600))
-      (doc-bg                   (named-color 'grey-50)))
+      (variable-fg              (constant-light-theme-color 'black))
+      (function-fg              (constant-light-theme-color 'grey-900))
+      (type-fg                  (constant-light-theme-color 'grey-700))
+      (constant-fg              (constant-light-theme-color 'grey-600))
+      (keyword-fg               (constant-light-theme-color 'grey-500))
+      (builtin-fg               (constant-light-theme-color 'grey-400))
+      (string-fg                (constant-light-theme-color 'grey-600))
+      (doc-fg                   (constant-light-theme-color 'primary-600))
+      (doc-bg                   (constant-light-theme-color 'grey-50)))
   (custom-theme-set-faces
    'constant-light
    ;; Regular
@@ -231,6 +231,7 @@
 
 
 (provide-theme 'constant-light)
+(provide 'constant-light-theme)
 
 
 ;;; constant-light-theme.el ends here

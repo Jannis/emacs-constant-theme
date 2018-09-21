@@ -35,7 +35,7 @@
 
 (deftheme constant "A calm, dark, almost monochrome theme")
 
-(defconst named-colors
+(defconst constant-theme-colors
   '(;; Basics
     (white . "#ffffff")
 
@@ -89,66 +89,66 @@
     (purple . "#b965e8")))
 
 
-(defun named-color (name)
+(defun constant-theme-color (name)
   "Return the constant theme color with the given NAME."
-  (cdr (assoc name named-colors)))
+  (cdr (assoc name constant-theme-colors)))
 
 
 (let ((class                    '((class color) (min-colors 256)))
-      (default-fg               (named-color 'grey-100))
-      (default-bg               (named-color 'grey-900))
-      (minor-fg                 (named-color 'grey-700))
-      (inactive-fg              (named-color 'grey-600))
-      (border-fg                (named-color 'grey-850))
-      (frame-fg                 (named-color 'grey-500))
-      (cursor-fg                (named-color 'grey-500))
-      (cursor-bg                (named-color 'grey-500))
+      (default-fg               (constant-theme-color 'grey-100))
+      (default-bg               (constant-theme-color 'grey-900))
+      (minor-fg                 (constant-theme-color 'grey-700))
+      (inactive-fg              (constant-theme-color 'grey-600))
+      (border-fg                (constant-theme-color 'grey-850))
+      (frame-fg                 (constant-theme-color 'grey-500))
+      (cursor-fg                (constant-theme-color 'grey-500))
+      (cursor-bg                (constant-theme-color 'grey-500))
 
       ;; Scrollbars
-      (scrollbar-fg             (named-color 'grey-800))
-      (scrollbar-bg             (named-color 'grey-600))
+      (scrollbar-fg             (constant-theme-color 'grey-800))
+      (scrollbar-bg             (constant-theme-color 'grey-600))
 
       ;; Highlighting
-      (highlight-fg             (named-color 'white))
-      (highlight-bg             (named-color 'red))
+      (highlight-fg             (constant-theme-color 'white))
+      (highlight-bg             (constant-theme-color 'red))
 
       ;; Current line
-      (hl-line-bg               (named-color 'grey-810))
+      (hl-line-bg               (constant-theme-color 'grey-810))
 
       ;; Search
-      (search-fg                (named-color 'white))
-      (search-bg                (named-color 'primary-700))
-      (search-bg-0              (named-color 'primary-700))
-      (search-bg-1              (named-color 'primary-500))
-      (search-bg-2              (named-color 'primary-300))
-      (search-bg-3              (named-color 'primary-100))
+      (search-fg                (constant-theme-color 'white))
+      (search-bg                (constant-theme-color 'primary-700))
+      (search-bg-0              (constant-theme-color 'primary-700))
+      (search-bg-1              (constant-theme-color 'primary-500))
+      (search-bg-2              (constant-theme-color 'primary-300))
+      (search-bg-3              (constant-theme-color 'primary-100))
 
       ;; Selection
-      (selection-bg             (named-color 'grey-800))
+      (selection-bg             (constant-theme-color 'grey-800))
 
       ;; Auto-completion
-      (completion-fg            (named-color 'primary))
-      (completion-bg            (named-color 'grey-820))
-      (completion-match-fg      (named-color 'red-500))
-      (completion-mouse-fg      (named-color 'white))
-      (completion-selection-fg  (named-color 'white))
-      (completion-annotation-fg (named-color 'purple))
+      (completion-fg            (constant-theme-color 'primary))
+      (completion-bg            (constant-theme-color 'grey-820))
+      (completion-match-fg      (constant-theme-color 'red-500))
+      (completion-mouse-fg      (constant-theme-color 'white))
+      (completion-selection-fg  (constant-theme-color 'white))
+      (completion-annotation-fg (constant-theme-color 'purple))
 
       ;; Warnings & errors
-      (warning-fg               (named-color 'white))
-      (warning-bg               (named-color 'red-600))
-      (error-fg                 (named-color 'white))
-      (error-bg                 (named-color 'red))
+      (warning-fg               (constant-theme-color 'white))
+      (warning-bg               (constant-theme-color 'red-600))
+      (error-fg                 (constant-theme-color 'white))
+      (error-bg                 (constant-theme-color 'red))
 
       ;; Language syntax highlighting
-      (variable-fg              (named-color 'white))
-      (function-fg              (named-color 'grey-200))
-      (type-fg                  (named-color 'grey-300))
-      (constant-fg              (named-color 'grey-500))
-      (keyword-fg               (named-color 'grey-600))
-      (builtin-fg               (named-color 'grey-700))
-      (string-fg                (named-color 'grey-500))
-      (doc-fg                   (named-color 'primary-600)))
+      (variable-fg              (constant-theme-color 'white))
+      (function-fg              (constant-theme-color 'grey-200))
+      (type-fg                  (constant-theme-color 'grey-300))
+      (constant-fg              (constant-theme-color 'grey-500))
+      (keyword-fg               (constant-theme-color 'grey-600))
+      (builtin-fg               (constant-theme-color 'grey-700))
+      (string-fg                (constant-theme-color 'grey-500))
+      (doc-fg                   (constant-theme-color 'primary-600)))
   (custom-theme-set-faces
    'constant
 
@@ -227,6 +227,7 @@
 
 
 (provide-theme 'constant)
+(provide 'constant-theme)
 
 
 ;;; constant-theme.el ends here
