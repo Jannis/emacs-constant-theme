@@ -21,6 +21,14 @@ Emacs configuration file:
 
 ## Screenshots
 
+### constant
+
+![Dark](screenshots/constant.png)
+
+### constant-light
+
+![Light](screenshots/constant-light.png)
+
 ## Copyright
 
 Copyright (c) 2018 Jannis Pohlmann.
